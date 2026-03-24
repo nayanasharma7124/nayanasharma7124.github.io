@@ -148,42 +148,7 @@ body {
     text-decoration: underline;
 }
 
-/* TOGGLE BUTTON */
-#themeToggle {
-    margin-top: 15px;
-    padding: 8px 16px;
-    border-radius: 20px;
-    border: none;
-    background: #1e293b;
-    color: white;
-    cursor: pointer;
-}
-
-#themeToggle:hover {
-    background: #38bdf8;
-    color: black;
-}
-
-/* LIGHT MODE */
-.light-mode {
-    background: white;
-    color: black;
-}
-
-.light-mode .card {
-    background: #f1f5f9;
-    color: black;
-}
-
-.light-mode .skills span {
-    background: #e2e8f0;
-    color: black;
-}
-
-.light-mode a {
-    color: #2563eb;
-}
-    
+  
 /* FOOTER */
 footer {
     text-align: center;
@@ -208,7 +173,6 @@ footer {
     <p>Aspiring Data Scientist | ML • NLP • AI</p>
 
     <div class="buttons">
-        <button onclick="toggleTheme()" id="themeToggle">🌙 Toggle Theme</button>
         <a href="https://github.com/yourusername" target="_blank">GitHub</a>
         <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
         <a href="#projects">View Projects</a>
@@ -271,12 +235,6 @@ footer {
 <footer>
     © 2026 Nayana Sharma | Built with ❤️
 </footer>
-    
-<script>
-function toggleTheme() {
-    document.body.classList.toggle("light-mode");
-}
-</script>
     
 </body>
 </html>
