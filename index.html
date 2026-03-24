@@ -1,183 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nayana Sharma | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nayana Sharma | Portfolio</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
 
-        body {
-            background: #0f172a;
-            color: #e2e8f0;
-        }
+body {
+    background: linear-gradient(135deg, #0f172a, #020617);
+    color: #e2e8f0;
+    scroll-behavior: smooth;
+}
 
-        header {
-            text-align: center;
-            padding: 40px 20px;
-        }
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
-        header h1 {
-            font-size: 2.5rem;
-            color: #38bdf8;
-        }
+    background: radial-gradient(circle at top, rgba(56,189,248,0.2), transparent);
+}
 
-        header p {
-            margin-top: 10px;
-            color: #94a3b8;
-        }
+.hero h1 {
+    font-size: 3rem;
+    color: #38bdf8;
+    animation: fadeIn 1s ease-in-out;
+}
 
-        .container {
-            width: 90%;
-            max-width: 1000px;
-            margin: auto;
-        }
+.hero p {
+    margin: 10px 0 20px;
+    color: #94a3b8;
+    animation: fadeIn 2s ease-in-out;
+}
 
-        .section {
-            margin: 40px 0;
-        }
+/* BUTTONS */
+.buttons a {
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 25px;
+    background: #38bdf8;
+    color: black;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
 
-        .section h2 {
-            margin-bottom: 20px;
-            border-left: 4px solid #38bdf8;
-            padding-left: 10px;
-        }
+.buttons a:hover {
+    background: white;
+    transform: scale(1.05);
+}
 
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
+/* SECTION */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
 
-        .card {
-            background: #1e293b;
-            padding: 20px;
-            border-radius: 12px;
-            transition: 0.3s;
-        }
+.section {
+    margin: 80px 0;
+}
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
-        }
+.section h2 {
+    margin-bottom: 20px;
+    border-left: 4px solid #38bdf8;
+    padding-left: 10px;
+}
 
-        .card h3 {
-            margin-bottom: 10px;
-        }
+/* PROJECTS */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
 
-        .card p {
-            font-size: 0.9rem;
-            color: #cbd5f5;
-        }
+.card {
+    background: rgba(30, 41, 59, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
+}
 
-        .card a {
-            display: inline-block;
-            margin-top: 10px;
-            color: #38bdf8;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 0 20px rgba(56,189,248,0.4);
+}
 
-        .skills span {
-            display: inline-block;
-            background: #1e293b;
-            padding: 8px 12px;
-            margin: 5px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-        }
+/* GLOW EFFECT */
+.card::before {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(56,189,248,0.2), transparent);
+    top: -50%;
+    left: -50%;
+    opacity: 0;
+    transition: 0.4s;
+}
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            color: #64748b;
-        }
+.card:hover::before {
+    opacity: 1;
+}
 
-        .links a {
-            margin: 0 10px;
-            color: #38bdf8;
-            text-decoration: none;
-        }
-    </style>
+/* SKILLS */
+.skills span {
+    display: inline-block;
+    padding: 8px 14px;
+    margin: 6px;
+    background: rgba(30, 41, 59, 0.7);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.skills span:hover {
+    background: #38bdf8;
+    color: black;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #64748b;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
 </head>
 
 <body>
 
-<header>
+<!-- HERO -->
+<section class="hero">
     <h1>Nayana Sharma</h1>
-    <p>Aspiring Data Scientist | ML & NLP Enthusiast</p>
+    <p>Aspiring Data Scientist | ML • NLP • AI</p>
 
-    <div class="links">
+    <div class="buttons">
         <a href="https://github.com/yourusername" target="_blank">GitHub</a>
         <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+        <a href="#projects">View Projects</a>
     </div>
-</header>
+</section>
 
 <div class="container">
 
-    <!-- About -->
-    <div class="section">
-        <h2>About Me</h2>
-        <p>
-            I am a passionate Data Science student focused on building machine learning models 
-            and AI-based applications. I enjoy solving real-world problems using data and technology.
-        </p>
-    </div>
+<!-- ABOUT -->
+<div class="section">
+    <h2>About Me</h2>
+    <p>
+        I build intelligent systems using Machine Learning and NLP to solve real-world problems. 
+        Passionate about AI, data-driven solutions, and creating impactful tech products.
+    </p>
+</div>
 
-    <!-- Projects -->
-    <div class="section">
-        <h2>Projects</h2>
+<!-- PROJECTS -->
+<div class="section" id="projects">
+    <h2>Projects</h2>
 
-        <div class="projects">
+    <div class="projects">
 
-            <div class="card">
-                <h3>NewsHunt</h3>
-                <p>AI-powered news classification and recommendation system using NLP techniques.</p>
-                <a href="#">GitHub</a> | <a href="#">Live Demo</a>
-            </div>
-
-            <div class="card">
-                <h3>Demand Prediction</h3>
-                <p>Machine learning model to forecast product demand using regression techniques.</p>
-                <a href="#">GitHub</a> | <a href="#">Live Demo</a>
-            </div>
-
-            <div class="card">
-                <h3>Movie Recommendation</h3>
-                <p>Collaborative filtering-based recommendation system using MovieLens dataset.</p>
-                <a href="#">GitHub</a>
-            </div>
-
+        <div class="card">
+            <h3>NewsHunt</h3>
+            <p>AI-powered news classification and recommendation system using NLP.</p>
+            <a href="#">GitHub</a> | <a href="#">Live Demo</a>
         </div>
-    </div>
 
-    <!-- Skills -->
-    <div class="section">
-        <h2>Skills</h2>
-        <div class="skills">
-            <span>Python</span>
-            <span>Machine Learning</span>
-            <span>NLP</span>
-            <span>Pandas</span>
-            <span>Scikit-learn</span>
-            <span>SQL</span>
+        <div class="card">
+            <h3>Demand Prediction</h3>
+            <p>ML model to forecast product demand with high accuracy.</p>
+            <a href="#">GitHub</a> | <a href="#">Live Demo</a>
         </div>
+
+        <div class="card">
+            <h3>Movie Recommender</h3>
+            <p>Collaborative filtering-based recommendation engine.</p>
+            <a href="#">GitHub</a>
+        </div>
+
     </div>
+</div>
+
+<!-- SKILLS -->
+<div class="section">
+    <h2>Skills</h2>
+    <div class="skills">
+        <span>Python</span>
+        <span>Machine Learning</span>
+        <span>NLP</span>
+        <span>Pandas</span>
+        <span>Scikit-learn</span>
+        <span>SQL</span>
+    </div>
+</div>
 
 </div>
 
 <footer>
-    © 2026 Nayana Sharma | Portfolio
+    © 2026 Nayana Sharma | Built with ❤️
 </footer>
 
 </body>
